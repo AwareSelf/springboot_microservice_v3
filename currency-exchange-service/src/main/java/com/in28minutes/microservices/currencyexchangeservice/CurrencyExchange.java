@@ -73,6 +73,13 @@ public class CurrencyExchange {
 	public void setEnvironment(String environment) {
 		this.environment = environment;
 	}
+
+	@Override
+	public String toString() {
+		return "CurrencyExchange [id=" + id + ", from=" + from + ", to=" + to + ", conversionMultiple="
+				+ conversionMultiple + ", environment=" + environment + "]";
+	}
+	
 	
 
 }
