@@ -1,0 +1,18 @@
+docker container ls -a
+docker container stop id(first 4 digit)
+docker container ls -a   (you should see container status as exited)
+docker container prune   (this command removes all exited containers)
+docker compose -f docker-compose-05-zipkin.yaml up
+docker images
+docker image remove imageid(first 4 digits) (it will remove image
+only if container based on this image is not running)
+
+
+start docker engine (docker desktop) first:
+docker run -p externalport:internal_docker_port imagename:version_tag
+docker run -p 9411:9411 openzipkin/zipkin:2.23
+
+
+open another command prompt:
+docker container ls -a
+browser: localhost:9411  (zipkin server ui page)
